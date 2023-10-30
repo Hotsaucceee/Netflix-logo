@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-container {
+    position: relative;
+    /* background-color: beige; */
+    width: 23rem;
+    height: 30rem;
+
+}
+.box-container {
+    position: absolute;
+    width: 23rem;
+    height: 30rem;
+    /* background-color: white; */
+}
+
+.container-2 {
+    /* background-color: aqua; */
+    position: absolute;
+    width: 10rem;
+}
+
+
+.box {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    left: -2.9rem;
+    bottom: 0;
+    background-color: red;
+    animation-name: animate1;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.box2 {
+    position: absolute;
+    top: 0;
+    left: 6rem;
+    visibility: hidden;
+    animation-name: animate2;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.box3 {
+    background-color: red;
+    bottom: 0;
+    left: 15rem;
+    animation-name: animate3;
+    animation-delay: 4s;
+    visibility: hidden;
+    animation-timing-function: ease-in;
+}
+
+@keyframes animate1 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 30rem;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        left: -2.8rem;
+        transform: skew(30deg);
+        height: 0;
+    }
+    100% {
+        height: 100%;
+        width: 8.2rem;
+        transform: skew(30deg);
+        visibility: visible;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        visibility: visible;
+        height: 0;
+    }
+    100% {
+        height: 30rem;
+        visibility: visible;
+    }
+}
